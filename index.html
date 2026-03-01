@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Salary Tax Calculator</title>
+  <link rel="stylesheet" href="/src/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="app">
+    <div class="calculator-panel">
+      <h1>Global Tax Calculator</h1>
+      <p class="subtitle">Global salary breakdown with premium analytics.</p>
+
+      <div class="input-group">
+        <label for="country">Country</label>
+        <select id="country"></select>
+      </div>
+
+      <div id="customTaxSection" class="input-group" style="display: none;">
+        <label>Custom Tax Settings</label>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div>
+            <label for="customCountryName" style="font-size: 0.8rem;">Country Name</label>
+            <input type="text" id="customCountryName" placeholder="e.g., Germany" />
+          </div>
+          <div>
+            <label for="customCurrency">Currency</label>
+            <select id="customCurrency">
+              <option value="$">USD ($)</option>
+              <option value="€">EUR (€)</option>
+              <option value="£">GBP (£)</option>
+              <option value="₹">INR (₹)</option>
+              <option value="CA$">CAD (CA$)</option>
+              <option value="A$">AUD (A$)</option>
+              <option value="¥">JPY (¥)</option>
+              <option value="R$">BRL (R$)</option>
+            </select>
+          </div>
+        </div>
+        <div style="margin-top: 1rem;">
+          <label for="customTaxRate" style="font-size: 0.8rem;">Tax Rate (%)</label>
+          <input type="number" id="customTaxRate" placeholder="e.g., 25" min="0" max="100" step="0.1" />
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="salary">Annual Gross Salary</label>
+        <div class="input-with-prefix">
+          <span id="currencyPrefix" class="input-prefix">$</span>
+          <input type="number" id="salary" placeholder="Enter amount..." value="100000" />
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label>Deductions / Allowances</label>
+        <div id="deductionsList" class="deductions-list">
+          <!-- Dynamic deductions here -->
+        </div>
+        <button id="addDeduction" class="btn btn-secondary">Add Deduction</button>
+      </div>
+
+      <button id="exportPdf" class="btn" style="margin-top: 1rem; width: 100%;">Download PDF Report</button>
+    </div>
+
+    <div class="display-panel">
+      <div class="net-salary-card">
+        <div style="font-size: 0.9rem; color: var(--text-muted);">Annual Net Salary</div>
+        <div id="netSalary" class="net-val">$0</div>
+      </div>
+
+      <div class="results-card">
+        <div class="result-item">
+          <span>Total Tax</span>
+          <span id="totalTax" class="result-val">$0</span>
+        </div>
+        <div class="result-item">
+          <span>Effective Tax Rate</span>
+          <span id="effectiveRate" class="result-val">0%</span>
+        </div>
+      </div>
+
+      <div class="chart-container">
+        <canvas id="taxChart"></canvas>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>

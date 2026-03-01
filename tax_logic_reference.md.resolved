@@ -1,0 +1,85 @@
+# Tax Logic Reference Summary
+
+This document details the tax brackets, deductions, and special rules implemented in the codes for each country.
+
+---
+
+## 🇺🇸 USA (Federal 2025)
+**Currency**: USD ($) | **Filing Status**: Single
+
+### Deductions
+- **Standard Deduction**: $15,000 (Income below this amount is tax-free).
+
+### Tax Brackets
+| Rate | Income Range (Excluding Deduction) |
+| :--- | :--- |
+| **10%** | $0 — $11,925 |
+| **12%** | $11,925 — $48,475 |
+| **22%** | $48,475 — $103,350 |
+| **24%** | $103,350 — $197,300 |
+| **32%** | $197,300 — $250,525 |
+| **35%** | $250,525 — $626,350 |
+| **37%** | Above $626,350 |
+
+---
+
+## 🇬🇧 United Kingdom (2024-2025)
+**Currency**: GBP (£)
+
+### Deductions
+- **Personal Allowance**: £12,570 (Standard tax-free limit).
+- **High Earner Rule**: For every £2 earned above £100,000, the Personal Allowance reduces by £1. It becomes £0 if income reaches £125,140.
+
+### Tax Brackets
+| Rate | Taxable Income (Above Allowance) |
+| :--- | :--- |
+| **Basic (20%)** | £0 — £37,700 |
+| **Higher (40%)** | £37,700 — £125,140 |
+| **Additional (45%)** | Above £125,140 |
+
+---
+
+## 🇮🇳 India (FY 2025-26 New Regime)
+**Currency**: INR (₹)
+
+### Deductions
+- **Standard Deduction**: ₹75,000.
+- **Section 87A Rebate**: If your net taxable income is ₹12,00,000 or less (after SD), your total tax is zeroed out.
+
+### Tax Brackets
+| Rate | Income Range (Excluding SD) |
+| :--- | :--- |
+| **0%** | ₹0 — ₹4 Lakh |
+| **5%** | ₹4 Lakh — ₹8 Lakh |
+| **10%** | ₹8 Lakh — ₹12 Lakh |
+| **15%** | ₹12 Lakh — ₹16 Lakh |
+| **20%** | ₹16 Lakh — ₹20 Lakh |
+| **25%** | ₹20 Lakh — ₹24 Lakh |
+| **30%** | Above ₹24 Lakh |
+- **Cess**: 4% Health & Education Cess is added to the total tax calculated.
+
+---
+
+## 🇨🇦 Canada (2025 Federal + Ontario)
+**Currency**: CAD (CA$)
+
+### Deductions & Credits
+- **Basic Personal Amount (BPA)**: $16,129. This is used as a tax credit (15% of BPA) subtracted from your Federal tax liability.
+
+### Federal Brackets
+| Rate | Income Range |
+| :--- | :--- |
+| **15%** | First $57,375 |
+| **20.5%** | $57,375 — $114,750 |
+| **26%** | $114,750 — $177,882 |
+| **29%** | $177,882 — $253,414 |
+| **33%** | Above $253,414 |
+
+### Ontario (Provincial) Brackets
+| Rate | Income Range |
+| :--- | :--- |
+| **5.05%** | First $52,886 |
+| **9.15%** | $52,886 — $105,775 |
+| **11.16%** | $105,775 — $150,000 |
+| **12.16%** | $150,000 — $220,000 |
+| **13.16%** | Above $220,000 |
